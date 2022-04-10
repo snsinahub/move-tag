@@ -13,3 +13,4 @@ runs:
   using: 'composite'
   run: |
     git pull origin
+    ls
