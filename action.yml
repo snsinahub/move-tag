@@ -1,0 +1,15 @@
+name: 'move-tags'
+description: 'Moving tag'
+author: 'snsina'
+inputs:
+  tag_name:
+    required: true
+  commit_sha:
+    required: true
+outputs:
+  cache-hit:
+    description: 'A boolean value to indicate an exact match was found for the primary key'
+runs:
+  using: 'composite'
+  run: |
+    git pull origin
