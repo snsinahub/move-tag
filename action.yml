@@ -14,7 +14,7 @@ runs:
   steps:
     - run: |
         git pull origin
-        git tag origin -f ${{ github.event.inputs.tag_name }} ${{ github.event.inputs.commit_sha }}
+        git tag -f ${{ github.event.inputs.tag_name }} ${{ github.event.inputs.commit_sha }}
         git push origin -f ${{ github.event.inputs.tag_name }}
         ls
       shell: bash
