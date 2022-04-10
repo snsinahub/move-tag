@@ -10,7 +10,9 @@ outputs:
   cache-hit:
     description: 'A boolean value to indicate an exact match was found for the primary key'
 runs:
-  using: 'composite'
-  run: |
-    git pull origin
-    ls
+  using: "composite"
+  steps:
+    run: |
+      git pull origin
+      ls
+    shell: bash
