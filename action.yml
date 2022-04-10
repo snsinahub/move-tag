@@ -12,7 +12,7 @@ outputs:
 runs:
   using: "composite"
   steps:
-    run: |
-      git pull origin
-      ls
-    shell: bash
+    - run: |
+        git pull origin
+        ls
+      shell: bash
