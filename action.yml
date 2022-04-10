@@ -13,6 +13,8 @@ runs:
   using: "composite"
   steps:
     - run: |
+        set -e
+        ls
         git pull origin
         git tag -f ${{ github.event.inputs.tag_name }} ${{ github.event.inputs.commit_sha }}
         git push origin -f ${{ github.event.inputs.tag_name }}
